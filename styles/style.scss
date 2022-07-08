@@ -1,0 +1,247 @@
+$primary-color-white : hsl(0, 0%, 100%);
+$primary-color-lightGrey: hsl(217, 12%, 63%);
+$primary-color-mediumGrey: hsl(216, 12%, 54%, 0.1);
+$primary-color-darkBlue:hsl(213, 19%, 18%);
+$primary-color-veryDarkBlue: hsl(216, 12%, 8%);
+$primary-color-orange : hsl(25, 97%, 53%);
+
+@import "./general";
+
+body {
+    background-color: $primary-color-veryDarkBlue;
+}
+
+.container { 
+   width: 100vw;
+   height : 100vh;
+   background-color: $primary-color-veryDarkBlue;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   .hide {
+    display: none;
+   }
+
+    .card-1 {
+        background-color: $primary-color-darkBlue;
+        width: 88%;
+        border-radius: 1.5rem ;  
+        padding: 4rem 3rem 4rem 3rem;
+        max-width: 41rem;
+         
+    }
+
+  
+
+    h1 {
+        color : white;
+        margin: 1.3rem 0 1.3rem 0; 
+    }
+    p {
+        color : $primary-color-lightGrey;
+        margin-bottom: 1.3rem;
+    }
+    .rating-wrapper {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+        .btn-rating {
+            color : $primary-color-lightGrey;
+            width: 4rem;
+            height: 4rem; 
+            border-radius: 50%;
+            background-color: $primary-color-mediumGrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            div {
+                transform: translateY(20%);
+            }
+
+            &:hover {
+                background-color: $primary-color-orange;
+                cursor: pointer;
+
+                div {
+                    color : $primary-color-white
+                }
+            }
+        }
+
+        .active {
+            background-color: $primary-color-lightGrey;
+
+            div {
+                color : $primary-color-white
+            }
+        }
+    }
+   
+    .star { 
+        background-color: $primary-color-mediumGrey;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding : 7px;
+    }
+
+    .btn {
+        
+        .btn-div {
+            display: flex;
+            justify-content: center;
+        align-items: center;
+            background-color: $primary-color-orange;
+            color: $primary-color-white;
+            width: 100%;
+            height: 2.5rem;
+            margin-top: 1.3rem;
+            border-radius: 20px;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: $primary-color-white;
+    
+                div {
+                    color: $primary-color-orange
+                }
+            }
+        }
+       
+       
+    }
+
+    .card-2 {
+        background-color: $primary-color-darkBlue;
+        width: 88%;
+        border-radius: 1.5rem ;  
+        padding: 4rem 3rem 4rem 3rem;
+        max-width: 41rem;
+    }
+
+    .thankYou {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .selectStar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .p-tag{
+        background-color: $primary-color-mediumGrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13.5rem;
+        height: 3rem;
+        border-radius: 20px;
+        margin-top: 1.3rem;
+
+            p {
+                color: $primary-color-orange;
+                margin-top: 1.2rem;
+                font-size: 1.2rem;
+            }
+        }
+        
+    }
+
+    .thankYouTag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+    }
+    .p2-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            width : 20rem;
+            font-size: 1.3rem;
+        }
+    }
+  
+
+} 
+
+// Media screen for desktop
+
+@media screen and (min-width : 1440px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-1 {
+            padding : 3rem;
+          
+
+            .star {
+                width: 5rem;
+                height : 5.0rem;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+                margin : 30px 0 20px 0
+            }
+    
+            p {
+                font-size: 1.2rem;
+            }
+
+            .rating-wrapper {
+                margin: 20px 0 30px 0;
+            }
+
+            .btn {
+                .btn-div {
+                    height : 4rem;
+                    font-size: 1.5rem;
+                    
+                }
+            }
+        }
+       
+       .card-2 {
+        .selectStar {
+            padding: 17px;
+
+            .p-tag {
+                
+               width: 17rem;
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+
+        }
+        .p2-tag {
+
+            p{
+                width : 30rem;
+                font-size: 1.3rem;
+                text-align: center;
+                line-height: 1.7;
+            }
+        }
+       }
+       
+    }
+}
+
+
